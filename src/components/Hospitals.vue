@@ -2,7 +2,15 @@
   <div v-if="hospitals.length > 0">
     <h2> Our suggested Hospitals: </h2>
     <ol>
-    <li v-for="hospital in hospitals" v-bind:key="hospital.id.$numberInt">{{ hospital.name }} <span class="wait-text"> <span class="wait-text-title">Wait time:</span> <span class="wait-text-value">{{ formatWaitingTime(parseInt(hospital.waitingTime.$numberDouble)) }} </span> </span></li>
+      <li v-for="hospital in hospitals" v-bind:key="hospital.id.$numberInt">
+        {{ hospital.name }}
+          <span class="wait-text">
+            <span class="wait-text-title">Wait time:</span>
+            <span class="wait-text-value">
+              {{ formatWaitingTime(parseInt(hospital.waitingTime.$numberDouble))}}
+            </span>
+          </span>
+      </li>
     </ol>
   </div>
 </template>

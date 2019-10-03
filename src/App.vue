@@ -14,6 +14,8 @@ export default {
 <style>
 #app {
   margin-top: 60px;
+  max-width: 500px;
+  margin: auto;
 }
 
 body {

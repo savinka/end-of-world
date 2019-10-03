@@ -14,7 +14,7 @@ export default new Vuex.Store({
   actions: {
     getAllHospitals ({ state, commit }) {
       return api.getHospitalsForPatient(
-        parseInt(state.illness.illness.id.$numberInt),
+        parseInt(state.illness.id.$numberInt),
         state.levelOfPain)
       .then(hospitals => {
         commit('setHospitals', hospitals)
@@ -34,6 +34,7 @@ export default new Vuex.Store({
     },
     setLevelOfPain (state, levelOfPain) {
       state.levelOfPain = levelOfPain
+      state.hospitals = []
     },
     setHospitals (state, hospitals) {
       state.hospitals = hospitals

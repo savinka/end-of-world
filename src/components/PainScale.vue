@@ -2,7 +2,9 @@
   <div>
     <h2> Select severity level: </h2>
     <ol>
-    <li v-for="i in [0,1,2,3,4]" v-bind:key="i" v-on:click="next(i)" class="circle">   </li>
+      <li v-for="i in [0,1,2,3,4]" v-bind:key="i"
+        v-on:click="next(i)" class="circle">
+      </li>
     </ol>
   </div>
 </template>

@@ -2,7 +2,10 @@
   <div>
     <h2> Select an illness: </h2>
     <ul>
-    <li v-for="illness in illnesses" v-bind:key="illness.illness.id.$numberInt" v-on:click="next(illness)">{{ illness.illness.name }} <span class="arrow">></span></li>
+      <li v-for="illness in illnesses" v-bind:key="illness.illness.id.$numberInt"
+        v-on:click="next(illness.illness)">
+          {{ illness.illness.name }} <span class="arrow"> > </span>
+      </li>
     </ul>
   </div>
 </template>
@@ -16,7 +19,6 @@ export default {
     msg: String
   },
   computed: mapState({
-    processed_hospitals: state => state.hospitals,
     illnesses: state => state.illnesses
   }),
   methods: {
